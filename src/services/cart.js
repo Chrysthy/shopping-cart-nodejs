@@ -6,5 +6,8 @@ async function addItem(userCart) {
 }
 
 
+// -> deleta item no carrinho
+async function deleteItem(userCart, name) {
 
+}
 
