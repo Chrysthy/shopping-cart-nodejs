@@ -11,3 +11,7 @@ async function deleteItem(userCart, name) {
 
 }
 
+// -> remover um item - diminui um item
+async function removeItem(userCart, index) {
+
+}
