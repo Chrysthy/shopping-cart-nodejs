@@ -15,3 +15,9 @@ async function deleteItem(userCart, name) {
 async function removeItem(userCart, index) {
 
 }
+
+
+// -> calcular o total
+async function calculateTotal(userCart) {
+
+}
