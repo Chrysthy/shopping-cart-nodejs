@@ -12,12 +12,16 @@ async function calculateTotal(userCart) {
         total + item.subtotal(), 0);
 
     console.log(result);
-    
+
 }
 
 // -> deleta item no carrinho
 async function deleteItem(userCart, name) {
+    const index = userCart.findIndex((item) => item.name === name)
 
+    if (index !== -1) {
+        userCart.splice(index, 1);
+    }
 }
 
 // -> remover um item - diminui um item
