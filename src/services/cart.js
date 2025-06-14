@@ -8,10 +8,13 @@ async function addItem(userCart, item) {
 
 // -> calcular o total
 async function calculateTotal(userCart) {
+
+    console.log("\nShopping cart total is:");
+
     const result = userCart.reduce((total, item) =>
         total + item.subtotal(), 0);
 
-    console.log(result);
+    console.log(`Total 💲 ${result}`);
 
 }
 
@@ -29,4 +32,15 @@ async function removeItem(userCart, index) {
 
 }
 
-export { addItem, calculateTotal, deleteItem, removeItem };
+async function displayCart(userCart) {
+
+    console.log("Shopping Cart List:");
+
+    userCart.forEach((item, index) => {
+
+        console.log(`\n ${index + 1}.${item.name} - R$ ${item.price} | ${item.quantity}X | Subtotal: R$ ${item.subtotal()}`);
+
+    })
+}
+
+export { addItem, calculateTotal, displayCart, deleteItem, removeItem };
