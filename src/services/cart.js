@@ -2,7 +2,7 @@
 
 async function displayCart(userCart) {
 
-    console.log("Shopping Cart List:");
+    console.log("\nShopping Cart List:\n");
 
     userCart.forEach((item, index) => {
 
@@ -12,13 +12,11 @@ async function displayCart(userCart) {
 }
 
 
-// -> adiciona item no carrinho
 async function addItem(userCart, item) {
     userCart.push(item);
 }
 
 
-// -> calcular o total
 async function calculateTotal(userCart) {
 
     console.log("\nShopping cart total is:");
@@ -30,7 +28,7 @@ async function calculateTotal(userCart) {
 
 }
 
-// -> deleta item no carrinho
+
 async function deleteItem(userCart, name) {
     const index = userCart.findIndex((item) => item.name === name)
 
@@ -39,18 +37,32 @@ async function deleteItem(userCart, name) {
     }
 }
 
-// -> remover um item - diminui um item
-async function removeItem(userCart, index) {
 
-    //transforma o indice visual do usuário para o índice do array
-    //ex: o usuário vê o índice 1, mas o array começa no índice 0
-    const deleteIndex = index - 1;
+async function removeItem(userCart, item) {
 
-    //É maior do que zero e menor que o tamanho do carrinho
-    if (index >= 0 && index < userCart.length) {
+    
+    const indexFound = userCart.findIndex((product) => product.name === item.name);
 
-        userCart.splice(deleteIndex, 1);
+   
+    if (indexFound == -1) {
+        console.log("Item not found in the cart.");
+        return;
     }
+
+    
+    if (userCart[indexFound].quantity > 1) {
+        userCart[indexFound].quantity -= 1; // pega o valor e diminue 1
+
+        return;
+    }
+
+    
+    if (userCart[indexFound].quantity == 1) {
+        userCart.splice(indexFound, 1); 
+
+        return;
+    }
+
 }
 
 
