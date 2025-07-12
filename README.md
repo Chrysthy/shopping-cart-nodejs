@@ -26,6 +26,13 @@
 
 <br>
 
+## 🛠 Technologies
+
+- NodeJS
+- JavaScript
+- Git e GitHub
+
+<br>
 
 
 ## 📜 License
