@@ -44,6 +44,13 @@
 <br> 
 
 
+## 💻 Project
+
+
+This is a simple and functional Shopping Cart API built with Node.js. It simulates the core logic behind an e-commerce shopping cart.
+
+<br>
+
 ## 📜 License
 
 * This project is licensed under the [MIT License](https://choosealicense.com/licenses/mit/)
