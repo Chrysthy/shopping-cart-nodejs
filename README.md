@@ -31,8 +31,17 @@
 - NodeJS
 - JavaScript
 - Git e GitHub
+- npm
 
 <br>
+
+## ✨ Features
+
+- List of items purchased
+- Quantity and price
+- Total amount
+
+<br> 
 
 
 ## 📜 License
